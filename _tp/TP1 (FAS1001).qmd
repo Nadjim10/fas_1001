@@ -6,6 +6,18 @@ editor: visual
 Date de remise du TP1: "22 janvier 2024"
 ---
 
+![](images/Git log TP1(FAS_1001).png)
+
+D'abord, j'ai fork le fichier "fas_1001" dans le compte de GitHub de l'enseignant. J'ai changé le nom du fichier dans laquelle j'ai fork pour que cela se nomme "fas_1001_lyonnais". J'ai ensuite la commande "cd Documents" afin de pouvoir rentrer le fichier "Documents à l'intérieur de mon fichier. Par la suite, j'ai utilisé la commande "git clone" tout en mettant le lien SSH qui m'a été donné après que j'ai fork dans GitHub. J'ai appliqué cette commande pour copier le fichier dans le but de transporter ce fichier jusqu'à mon terminal.
+
+Ensuite, j'ai fait la commande "git branch" dans l'objectif de créer mon fichier de cours en faisant "git branch fas_1001_lyonnais". J'ai utilisé la commande "git checkout fas_1001_lyonnais pour pouvoir changer de branch dans GitHub.
+
+Lorsque j'ai créé le document quarto en format PDF qui se nomme "TP1 (FAS1001), j'ai sauvegardé ce document dans le fichier "\_tp" à l'intérieur du fichier "fas_1001_lyonnais". J'ai utilisé le bouton "Render" afin d'ajouter des modifications à mon document quarto du TP1. Une fois la modification faite, j'ai appliqué la commande "git add ." pour pouvoir mettre les modifications de ce document dans GitHub. Après, j'ai fait la commande "git commit -m "Premier commit"" dans le but de sauvegarder les codes et apporter un message pour identifier les modifications du document quarto du TP1.
+
+J'ai appliqué les mêmes processus pour le deuxième documents quarto qui se nomme "\_travail_session". C'est-à-dire que j'ai fait la commande "git add ." pour ajouter des modifications du document "\_travail_session" dans GitHub et la commande "git commit -m Création du document du travail de session" afin de sauvegarder les codes et identifiers les modifications du documents quarto du travail de session.
+
+Finalement, j'ai utilisé la commande "git log" pour pouvoir afficher la liste des commits effectués sur les deux branches dans laquelle on a travaillé. Les deux git branches en question qu'on a travaillé pour le TP1 est celle de "Premier commit" et "Création du documents du travail de session".
+
 ## Quarto
 
 Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
