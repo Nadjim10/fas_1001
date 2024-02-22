@@ -1,0 +1,186 @@
+---
+title: "TP3 (FAS1001)"
+author: "Joackim Lyonnais"
+format: pdf
+editor: visual
+---
+
+# Comparaison des tendances des sujets de discours entre la mandat de Stephen Harper et de Justin Trudeau
+
+## Introduction :
+
+D'abord, le sujet de ce projet de travail qui consiste à faire une analyse textuelle de dictionnaire des bases de données sera basé sur les données parlementaire canadien durant le dernier mandat de Stephen Harper entre 2011 et 2015 et le premier mandat de Justin Trudeau entre 2015 et 2019. Ces données parlementaires canadien proviennent de LIPAD. LIPAD est en bref un site où on peut télécharger des bases de données parlementaire durant de différentes époques à des années, des mois et des jours précis pendant la séance parlementaire. En effet, l'objectif de ce travail est de pouvoir faire des comparaisons entre les deux périodes dans lesquelles on va sélectionner pour pouvoir voir et analyser s'il y a eu des tendances et des changements sur les enjeux et sujets parlementaires abordés. Ce qu'on cherche à se questionner pour ce projet de travail est de savoir si le changement de premier ministre à eu un effet majeur sur les enjeux abordés sur les discours des députés et ministres durant les séances parlementaires. C'est la raison pour laquelle qu'on a sélectionné la période du mois de novembre 2014 et du mois de mai 2018 comme bases données utilisées issu de LIPAD afin de comparer les différences sur les paradigmes des discours parlementaires. On a sélectionné la période de novembre 2014 puisque Stephen Harper était encore premier ministre à cette époque. On a également choisi la période de mai 2018 parce que Justin Trudeau est au pouvoir à ce moment-ci. Les enjeux clés qu'on va évaluer et visualiser pour savoir s'il y a eu un changement de discours des partis politique fédérale vont être l'immigration, l'environnement, les droits civiques et le logement. Ces sujets vont nous donner une idée s'il y a eu une plus grande importance ou non sur les discours de différents députés de divers partis politiques en lien avec le changement de premier ministre.
+
+## Données utilisées :
+
+Les bases de données de LIPAD dans lesquelles qu'on va utiliser pour faire des comparaisons de tendances sur les sujets des différents partis politiques tels que l'immigration, l'environnement, les droits civiques et le logement en fonction des discours parlementaire fédérale vont provenir du fichier de moi de novembre 2014 et mai 2018. Les jours des séances de discours parlementaires seront tous incluent dans les résultats des données pour pouvoir élargir l'ensemble des journées de ces deux mois mentionnés précédemment.
+
+En ce qui concerne de l'analyse du dictionnaire, le dictionnaire qu'on utilisera afin de faire les anaylses des tendances des discours parlementaires sera le lexicoder en Anglais puisque c'est un dictionnaire déjà existant et les mots clés, c'est-à-dire les catégories de mots qui sont incluent dans ce dictionnaire sont très liés et utiles pour pouvoir mener à notre analyse. Ce dictionnaire est en format yoshikoder. En fait, on n'aura pas besoin dans le cadre de ce projet de travail de faire un dictionnaire personnaliser puisqu'avec le dictionnaire de lexicoder en Anglais, on a déjà les sujets nécessaires pour pouvoir à mener à notre analyse des enjeux les plus discutés en répondant à notre question de recherche. De plus, le lexicoder est un dictionnaire où les enjeux politiques sont très concentrés pour pouvoir mener des analyses de bases de données politique.
+
+Par la suite, on va procéder à une transformation du dictionnaire de lexicoder en une base de données de dictionnaire afin de rendre les mots clés du dictionnaire en des thématiques de dictionnaire. Nos principales thématiques de dictionnaire dans laquelle on va analyser et visualiser seront le droits civiques "civil_rights", l'environnement "environment", l'immigration "immigration" et le logement "housing". Ces quatre thématiques clés du dictionnaire ont été organisé à travers la technique de racinisation de stemming. Cette technique permet une réduction des dimensions d'un texte. Les résultats des mots à travers la technique de stemming dépend des algorithmes. Cependant, cela coupe souvent juste les dernières lettres d'un mot du thématique du dictionnaire. Par exemple, dans la thématique de l'environnement, il y a un ensemble de mot clé comme pollution, contamination, déforestation et bien autres. Le stemming va faire en sorte que les dernières lettres des mots clé du thématique de l'envrionnement par exemple vont être réduites. Cela amenera le mot "deforestation" pour "deforest", "pollution" pour "pollut" et "contamination" pour contaminat". Le stemming permet aussi d'uniformiser les mots clés des thématiques du dictionnaire afin de faciliter l'analyse des textes. Elle peut être disponible dans toutes les langues. C'est-à-dire par exemple que changer de langue du dictionnaire de lexicoder aurait été possible pour mener le travail. Ce que la technique de racinisation comme le stemming va produire, c'est qu'à travers chaque thématique de dictionnaire, les ensembles de mots clés qui ont été produits et écrits vont pouvoir capturer l'ensembles des discours parlementaires des députés. Lorsque le politicien va commencer à faire son discours, les mots que le politicien va prononcer va permettre à la technique de stemming da catégoriser automatiquement dans quelle thématique du dictionnaire ces mots seront considérés à travers les mots qu'ils prononcent. En bref, s'il parle de logement et qu'il prononce par exemple le mot condo, le stemming va faire en sorte que le dictionnaire va pouvoir catégoriser ces mots pour la thématique de logement "housing".
+
+Le type de fichier dans laquelle on a téléchargé et importé la base de données LIPAD sont des fichiers excel en format CSV. On va ensuite procéder à deux fusions de base de données. La première fusion va inclure l'ensemble des fichiers excel du mois de novembre 2014 afin de pouvoir regrouper ces fichiers en un seul fichier. On va également naviguer dans le dossier pour permettre cette fusion de la base de données. On va procéder également à la même manière concernant la fusion de l'ensenble des fichiers excel du mois de mai 2018. Ces deux fusions vont permettre d'élargir le nombre d'observations, c'est-à-dire le nombre de discours prononcés chez les parlementaires canadien. En fait, pour la base de données fusionné parlementaire de novembre 2014, il y a 4078 observations et 15 variables. Pour celle de mai 2018, il y a 5023 observations et 15 variables également.
+
+L'étape suivante sera le processus du nettoyage des deux bases de données. Le premier nettoyage concerne la base de données de novembre 2014 et le deuxième est celle de mai 2018. On va créer une nouvelle base de données où on élimera les variables qu'on n'aura pas besoin d'utiliser pour mener à l'analyse de notre recherche. Les seules variables qu'on gardera pour effectuer notre analyse sont le "speechdate", c'est-à-dire la date du discours parlementaire, le "speechtext" dont le texte du discours et "speakerparty" dont le parti politique que l'élu représentait. Ensuite, on va faire en sorte que l'ensemble des lettres de la variable du texte de discours "speechtext" soit en minuscule afin de permettre au dictionnaire de capturer plus facilement les mots prononcés par le député qui fait le discours dans le thématique du dictionnaire. On va supprimer toutes les données manquantes afin de permettre le nettoyage des variables. Les deux nettoyages des bases de données de novembre 2014 et mai 2018 ont été procédés de la même manière. Ainsi, lorsque les données manquantes des deux bases de données ont été enlevée, le nombre d'observation pour la base de données nettoyé de novembre 2014 est de 3721 avec 3 variable et celle de mai 2018 est de 4665 avec 3 variables également.
+
+## Description des résultats :
+
+![](images/Séance%20parlementaire%20novembre%202014.png)
+
+Premièrement, à ce qu'on peut s'en rendre compte à travers ces graphiques c'est que les droits civiques est l'enjeu le plus abordés des discours parlementaires canadien des élus durant le mois de novembre 2014. On ne prend pas en considération les graphiques de données manquante et des députés indépendants. L'ensemble des trois partis politiques ont mis une plus grande importance sur le sujet du droit civique que les trois autres enjeux mentionnés dans les graphiques. Les libéraux ont mis davantage en valeurs les droits civiques que les deux autres partis politiques dont le NDP de Thomas Mulcair à l'époque et le parti Conservateur de Stephen Harper. Les trois autres enjeux n’ont presque pas été abordés par les trois grands partis politiques fédéral. Ce qu'on déduire dans ce graphique c'est que l'environnement, le logement et l'immigration n'étaient pas des sujets qui prioritaire en novembre 2014 puisque l'importance médiatique derrière ces trois enjeux mentionnés n'étaient pas au rendez-vous à ce moment-ci.
+
+![](images/Séance%20parlementaire%20mai%202018.png)
+
+Deuxièmement, on constate que les libéraux et les conservateurs ont presque autant abordés l'enjeux de l'environnement avec une certaine importance aux niveaux des proportions. Bien évidemment, le parti vert a mis grandement en valeurs le discours sur l'environnement ce qui est fait essence de leur programme de ce parti politique. On peut déduire que l'enjeux de l'environnement a été le plus évoquer chez l'ensemble des partis politiques fédérale sauf probablement le NDP. On remarque que l'enjeux du logement a été le moins médiatisé parmi les enjeux sélectionnés pour le travail de recherche durant le mois de mai 2018 chez les parlementaires canadiens. Les députés du NDP ont été ceux et celles qui ont mentionnés le plus souvent l'enjeux des droits civiques. La raison probablement de cela est sûrement le fait qu'un parti avec une tendance plus à gauche comme le NDP aura un plus grand intérêt d'aborder les droits civiques des personnes comme enjeux puisque les gens qui sont issues des minorités sont ceux et celles que la gauche va très souvent y défendre pour pouvoir trouver des programmes sociaux et autres afin d'améliorer leurs conditions de vie générales. L'immigration a été relativement évoquer chez les conservateurs, NDP et les libéraux, mais sur des semaines différentes de ce mois-ci. Par exemple, le NDP a grandement parler de l'immigration durant la première semaine de mai 2018 et ensuite les conservateurs prennent un peu la relève de l'enjeux de l'immigration, mais seulement durant la deuxième et la dernière semaine de ce mois-ci. Finalement, les libéraux ont évoqué l'enjeux de l'immigration principalement durant la semaine de 21 mai.
+
+Pour conclure dans le cadre de ce projet de travail, on peut constater que le changement majeur qu'il y a eu sur les enjeux abordés chez les parlementaires des trois grandes partis politiques fédérale entre novembre 2014 et mai 2018 c'est que l'enjeu de l'environnement a pris une plus grande considération chez les élus peu importe le parti politique en question. De plus, le changement climatique est un phénomène qui est de plus en plus médiatisé d'année en année. L'enjeu du logement a été celui qui a été le moins évoquer chez l'ensemble des partis politiques parmi les quatre sujets. En novembre 2014, l'enjeu des droits civiques primait sur les autrs sujets et en mai 2018, c'est l'environnement qui prend une plus grande place parmi les enjeux évoqués. Pour terminer, on peut sûrement conclure que l'enjeu de l'environnement a pris une plus grande importance lorsque Justin Trudeau est entré au pouvoir puisque le phénomène climatique a pris une plus grande considération médiatique à travers les années.
+
+```{r}
+library(fs)          # Direction vers tes fichiers
+library(crayon)      # couleurs dans le code
+library(quanteda)    # Package pour lire les dictionnaires 
+library(tidyverse)   
+library(clessnverse) # Package pour utiliser plus facilement un dictionnaire
+library(ggplot2)
+library(astrologer)
+library(beepr)
+library(fs)
+library(gutenbergr)
+library(stm)
+library(tidytext)
+library(stringr)
+library(dplyr)
+```
+
+```{r}
+# Dictionnaire anglais
+
+lexicoder_en <- dictionary(file = "policy_agendas_english.lcd", format = "yoshikoder") # Fichier lcd
+
+
+#  Transformation de la base de donnée en dictionnaire
+
+topic_dictionary_en <- read_csv("lexicoder_merged.csv") |>
+rename(language = motAnglais) |>
+select(language, categorie) |>
+na.omit() |>
+filter(language != "x") |>
+unstack(., form=language~categorie) |>
+dictionary()
+
+# Données de LIPAD: https://www.lipad.ca/data/
+
+Data_parl_1 <- read_csv("11/2014-11-17.csv")
+
+Data_parl_2 <- read_csv("11/2014-11-18.csv")
+
+Data_parl_3 <- read_csv("5/2018-5-1.csv")
+
+Data_parl_4 <- read_csv("5/2018-5-3.csv")
+
+
+# Fusion des bases de données
+
+files_1 <- dir_ls("11", regexp = "2014") # pour naviguer dans le dossier
+files_2 <- dir_ls("5", regexp = "2018") # même processus
+
+
+Data_parl_2014 <- files_1 |> 
+  map(~read_csv(files_1)) |>
+  reduce(bind_rows) |>
+  distinct()
+
+Data_parl_2018 <- files_2 |> 
+  map(~read_csv(files_2)) |>
+  reduce(bind_rows) |>
+  distinct()
+
+# Nettoyage de la base de donnée et sélection des variables pour exemple 1
+
+Data_parl_pre_clean_1 <- Data_parl_2014 |>
+  select(speechdate, speechtext, speakerparty) |>
+  #Nettoyage de base
+  mutate(speechtext = tolower(speechtext)) |>
+  # On enlève les NA's
+  na.omit()
+
+# Nettoyage de la base de donnée et sélection des variables pour exemple 2
+
+Data_parl_pre_clean_2 <- Data_parl_2018 |> 
+  select(speechdate, speechtext, speakerparty) |> 
+  ## Nettoyage de base ##
+  mutate(speechtext = tolower(speechtext)) |> 
+  ## remove NA's ##
+  na.omit()
+
+# ---- Exemple 1 : analyse du dictionnaire par date de Novembre 2014 ----
+
+run_dictionary(data       = Data_parl_pre_clean_1,  # Data
+               text       = speechtext,             # Text
+               dictionary = topic_dictionary_en) |>        # dictionnaire
+  bind_cols(Data_parl_pre_clean_1) |>                    # On remet les variables que je veux
+  select(-c(doc_id, speechtext)) |>                      # On retire les variables qu'on a plus besoin
+  pivot_longer(!c(speechdate, speakerparty), names_to = "categorie", values_to="n") |> # On structure notre base de données
+  ungroup() |> 
+  na.omit() |> 
+  group_by(speechdate, speakerparty, categorie) |> 
+  summarise(n=sum(n)) |> 
+  ## On calcule les proportions + nettoyage des variables ##
+  mutate(prop = round(n/sum(n),4)*100,
+         speakerparty = case_when(speakerparty == "Conservative"          ~ "Conservateur",
+                                  speakerparty == "Green Party"           ~ "Vert",
+                                  speakerparty == "New Democratic Party"  ~ "NDP",
+                                  speakerparty == "Liberal"               ~ "Libéral",
+                                  speakerparty == "Independent"           ~ "Indépendant"),
+         categorie = case_when(categorie == "immigration" ~ "Immigration",
+                               categorie == "environment" ~ "Environnement",
+                               categorie == "civil_rights" ~ "Droits civiques",
+                               categorie == "housing" ~ "Logement",
+                               T ~ as.character(categorie))) |> 
+  ### On filtre les catégories du dictionnaire qui nous intéressent ###
+  filter(categorie %in% c("Immigration", "Environnement", "Droits civiques", "Logement")) |> 
+  ggplot(aes(x = speechdate, y = prop, color = categorie)) +
+  geom_line(linewidth=1) +
+  facet_wrap(~speakerparty) +
+  scale_color_manual("", values = c("#e60049", "#0bb4ff", "#50e991", "#e6d800")) +
+  labs(x = "",
+       y = "Proportion (%)\n",
+       title = "Enjeux les plus discutés lors des débats parlementaires canadien en novembre 2014") +
+  theme_bw()
+
+# ---- Exemple 2 : analyse du dictionnaire par date de Mai 2018 ----
+
+run_dictionary(data       = Data_parl_pre_clean_2,  # Data
+               text       = speechtext,             # Text
+               dictionary = topic_dictionary_en) |>        # dictionnaire
+  bind_cols(Data_parl_pre_clean_2) |>                    # On remet les variables que je veux
+  select(-c(doc_id, speechtext)) |>                      # On retire les variables qu'on a plus besoin
+  pivot_longer(!c(speechdate, speakerparty), names_to = "categorie", values_to="n") |> # On structure notre base de données
+  ungroup() |> 
+  na.omit() |> 
+  group_by(speechdate, speakerparty, categorie) |> 
+  summarise(n=sum(n)) |> 
+  ## On calcule les proportions + nettoyage des variables ##
+  mutate(prop = round(n/sum(n),4)*100,
+         speakerparty = case_when(speakerparty == "Conservative"          ~ "Conservateur",
+                                  speakerparty == "Green Party"           ~ "Vert",
+                                  speakerparty == "New Democratic Party"  ~ "NDP",
+                                  speakerparty == "Liberal"               ~ "Libéral",
+                                  speakerparty == "Independent"           ~ "Indépendant"),
+         categorie = case_when(categorie == "immigration" ~ "Immigration",
+                               categorie == "environment" ~ "Environnement",
+                               categorie == "civil_rights" ~ "Droits civiques",
+                               categorie == "housing" ~ "Logement",
+                               T ~ as.character(categorie))) |> 
+  ### On filtre les catégories du dictionnaire qui nous intéressent ###
+  filter(categorie %in% c("Immigration", "Environnement", "Droits civiques", "Logement")) |> 
+  ggplot(aes(x = speechdate, y = prop, color = categorie)) +
+  geom_line(linewidth=1) +
+  facet_wrap(~speakerparty) +
+  scale_color_manual("", values = c("#e60049", "#0bb4ff", "#50e991", "#e6d800")) +
+  labs(x = "",
+       y = "Proportion (%)\n",
+       title = "Enjeux les plus discutés lors des débats parlementaires canadien en mai 2018") +
+  theme_bw()
+
+```
