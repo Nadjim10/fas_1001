@@ -1,0 +1,244 @@
+---
+title: "_travail_session"
+author: "Joackim Lyonnais"
+format: pdf
+editor: visual
+---
+
+# Comparaison des tendances des clivages idéologique des partis politiques et l'échiquier politique sur l'environnement et l'immigration sur les discours parlementaire chez le ministère de l'environnement et l'immigration entre le mandat de Stephen Harper et de Justin Trudeau en 2014 et 2018.
+
+# Introduction.
+
+Pour commencer, l'objectif de ce travail est plutôt de comprendre sur les niveaux des tendances idéologiques des discours parlementaires chez les politiciens au parlement à Ottawa. Le sujet de ce projet consiste à faire une analyse textuelle de dictionnaire des bases de données qui sera basé sur les données parlementaire canadien durant le dernier mandat de Stephen Harper entre 2011 et 2015 et le premier mandat de Justin Trudeau entre 2015 et 2019 encore. On va prendre pour encore une fois comme au précédent travail pratique les données de LIPAD. Cette fois-ci, le but de ce travail est de pouvoir mesurer le clivage idéologique des partis politiques fédérale sous Harper et Trudeau et aussi de mesurer l'échiquier politique du ministère de l'environnement et de l'immigration sous le dernier mandat de Stephen Harper et sous le premier mandat de Justin Trudeau afin de savoir si les deux ministères des deux premiers ministres ont des discours qui se positionnent davantage sur l'échiquier politique de la droite ou de la gauche. On va aussi évaluer s'il y a eu quelques changements de clivage idéologiques des différents partis politiques lorsqu'il y a eu un changement de premier ministre. Les seuls partis politiques qui seront pris en compte pour analyser les deux ministères sont le parti Conservateur et le parti Libéral au fédéral puisque les partis politiques qui ne sont pas au pouvoir n'ont pas de députés qui ont accès aux ministères. Les enjeux clés qu'on va évaluer et visualiser est le fait de savoir s'il y a une différence flagrante sur le clivage idéologique des partis politiques et sur l'échiquier politique du ministère de l'environnement et de l'immigration sous le dernier mandat de Harper et sous le premier mandat de Trudeau en 2014 et 2018 respectivement. Pour clos sur l'introduction, on va opter comme hypothèse que la seule différence majeur qu'il y aura sur les tendances idéologiques des discours parlementaire sur le ministère de l'envrionnement lorsque Justin Trudeau va rentrer au pouvoir.
+
+## Problématique de recherche.
+
+De manière chronologique, on prévoit dans le cadre de ce travail d'importer un dictionnaire sous le format de "yoshikoder" qui sera très pratique avec les bases de données parlementaire canadien de LIPAD afin de permettre l'analyse des discours des députés et du ministères de l'immigration et de l'environnement. Le dictionnaire sera en anglais puisque les bases de données de LIPAD sont en anglais et aussi dans le but de préserver l'originalité des discours parlementaire. Par la suite, on va mettre le dictionnaire "yoshikoder" en format csv afin d'organiser la catégorisation des différents terme politique issue du dictionnaire.
+
+Concernant les fusions des bases de données de LIPAD de l'année complète de 2014 et 2018, on n'a pas rencontré de problèmes puisque l'ensemble des observations de 2014 et 2018 ont été inclus dans une seule donnée. On a également procédé à fusionner l'ensemble des bases de données de 2014 sous un seul fichier et pareil pour les bases de données de 2018. Cependant, on n'est pas certain de l'utilité de ces deux dossiers de données de 2014 et de 2018 puisqu'on n'est pas sûre si pour produire un résultat clair concernant les graphiques sur l'échiquier politique du ministère de l'environnement et de l'immigration s'il est préférable de mettre le focus sur les fichiers d'une année unique ou sur l'ensemble des deux années en question. On a malgré tout créer les codages des trois possibilités de fusions de données mentionnées précédemment.
+
+On a par la suite créé trois dictionnaires dont le premier qui est basé sur le clivage idéologique, le deuxième est impliqué l'échiquier politique sur l'environnement et le troisième dictionnaire qui est repose sur l'échiquier politique sur l'immigration. Ces trois dictionnaires serviront à pouvoir bien évaluer s'il y a bel et bien une réellement différence entre les discours de la gauche et de la droite politique des partis politiques et des deux ministères dans laquelle on concentrera sur les deux différents mandats et années respective. Une fois les trois dictionnaires créés, on a procédé au fusionnement de chacun des trois dictionnaires en liste de base de données afin de permettre à la création de résultats afin de filtrer les mots clés qui sont inclus dans les dictionnaires créés des discours parlementaires des politiciens. Cela va permettre de connaître plus précisément lors de la diffusion des résultats s'il y a un réel impact sur le clivage idéologique et sur l'échiquier politique du ministère de l'environnement et de l'immigration sous les deux mandats et années respective.
+
+On a bien évidement fait des nettoyages et sélectionner les variables des trois bases de données dont le clivage idéologique, le ministère de l'environnement et de l'immigration dans lesquelles on va analyser dans le cadre du travail de session. On n'est cependant pas certains si nos variables sélectionnées si elles sont tous vraiment utiles pour la diffusion des résultats de données. Ce sera à vérifier éventuellement au courant du projet. Ces nettoyage et filtrage de données vont faciliter l'analyse des données de discours parlementaire sur les sujets précis dont les deux ministres de l'environnement et les deux ministres de l'immigration sous les deux mandats pour pouvoir observer les différences sur les tendances idéologiques de l'échiquier politique de l'environnement et de l'immigration.
+
+Pour ce qui des types de graphiques dans laquelle on va produire, on ne sait pas encore si ce sera un graphique de type "geom_line", "geom_col" ou autre. On est encore très confus et incertain sur quel type de graphique exactement qu'on va évaluer et visualiser les résultats des tendances idéologique des partis politique sur le clivage idéologique sous les deux années travailler en question. C'est également le même problème pour les graphiques et résultats sur l'échiquier politique du ministère de l'environnement et de l'immigration sous Harper et Trudeau.
+
+Ainsi, on n’a présentement pas trouver d'article scientifique pour prouver notre hypothèse de recherche. On se base jusqu'à présent sur nos connaissances personnelles pour pouvoir émettre notre question et hypothèse de recherche. On va certainement trouver quelques articles scientifiques dans le cadre de ce travail de session afin d'enrichir les idées concernant notre sujet de travail.
+
+## Données et méthodes.
+
+Les bases de données de LIPAD dans lesquelles qu'on va utiliser pour faire des comparaisons sur le clivage idéologique et sur l'immigration et l'environnement en fonction des discours parlementaire du ministre de l’Immigration et de l'environnement dans la scène politique fédérale vont provenir du fichier de l'année 2014 et 2018 au complet. En 2014 sous le dernier mandat de Harper, le ministre de l’Immigration à cette époque était Chris Alexander et la ministre de l’Environnement était Leona Aglukkaq. En 2018 sous le premier mandat de Justin Trudeau, le ministre de l’Immigration était Ahmed Hussen et la ministre de l’Environnement et du changement climatique était Catherine Mckenna. On mesurera l'ensemble de ces deux années afin d'élargir davantage l'analyse et l'évaluation des données afin de faciliter les tendances idéologiques de ces deux ministères sous les deux différents premiers ministres. Lorsqu'on a effectué aux fusions des bases de données de LIPAD de l'année complet de 2014 et de 2018, cela a amener à une fichier de donnée qui comporte 73586 observations et 15 variables. Pour ce qui est de la fusion des données de 2014 uniquement, cela a amener à avoir 39365 observations et 34221 observations pour ce qui est des fusions de la bases de donnée de l'année complète de 2018. Pour permettre ces évolutions, on a créé une valeur sous le nom de "years" qui incluent 2014 et 2018 en même temps afin de réussir à fusionner dans les fichiers de bases de données et de 2014 et 2018 ensembles. On a mené de la même manière concernant la valeur "years2014" et "years2018" afin de fusionner respectivement les bases de données chacun des deux années uniquement.
+
+Ensuite, lors de la création de nos trois dictionnaires qui sont basés sur le clivage idéologique, l'échiquier politique sur l'environnement et l'échiquier politique sur l'immigration, on a procédé le dictionnaire en deux listes. Les deux listes en question des dictionnaires est la "Gauche" et la "Droite" politique. Ces deux listes sont des éléments centraux qui permettront à analyser et à l'évaluer sur les tendances idéologiques concernant sur les discours parlementaires des partis politique et du ministère de l'environnement et de l'immigration. On a employé environ entre 10 à 14 mots sur chacun des listes des trois dictionnaires. On compte de rajouter davantage de mots clés sur les dictionnaires éventuellement afin de rendre le plus objectif les diffusions de résultats de données sur les tendances idéologiques des discours parlementaire canadien. Les mots clés des trois dictionnaires sont en anglais parce que les discours parlementaires dans la base de donnée de LIPAD sont en anglais uniquement. Les exemples de mots clé dans le dictionnaire de clivage idéologique qui indique la Gauche sont "social democracy", "socialism" "progressivism" et etc. Pour l'échiquier de la droite politique sont "libertarianism", nationalism", "patriotism", "liberalism", traditional values", "economic liberalism" et autres. Pour ce qui est du dictionnaire sur l'échiquier politique de l'environnement, les mots clés qui désignent la gauche politique sont ; "climate justice", "energetic transition", "zero waste", "green economy" et etc. Pour ce qui est des mots clés qui définient l'échiquier de la droite politique environnementale, il y a ; "economic freedom", "property right", "climate skepticism", "technological innovation" et etc. Pour clôturer sur cela, les mots clés qui indiquent l'échiquier de la gauche politique sur l'immigration inclus ; "human right", "inclusion", "diversity", "reception of refugees", "equel opportunities" et ainsi de suite. Concernant l'échiquier de la droite politique des mots clés du dictionnaire de l'immigration, il y a ; "border control", "national security", "illegal immigration", "legal immigration", "meritocracy" "job protection" et etc.
+
+Dans un autre contexte, pour ce qui est du nettoyage et sélection des variable, on a sélection dans chacun des trois sujets du travail dont le clivage politique, le ministère de l'environnement et le ministère de l'immigration, on a sélectionné comme variable dans le cadre du travail "speechdate", "speakeroldname", "subtopic", "speechtext", speakerparty" et "speakername". On a fait en sorte que dans la variable "speechtext" que toutes les phrases commence en minuscule et les mots incluant tous en minuscule afin de mieux faciliter capturer les mots dans l'ensemble des discours parlementaires des politiciens concernant les mots clés des dictionnaires dans lesquelles on travaillera. Le fait qu'ils soient en minuscule fera en sorte qu'il y aura sûrement moins de problème de bug lors des diffusions de résultats à travers les graphiques pour pouvoir vusialiser s'il y a bel et bien un impact majeur sur les clivages idéologique et sur les changements du paradigme politique des deux ministères sous les deux différentes années sélectionnées. Dans la variable "speakername" on a filtré pour faire en sorte d'inclure uniquement le ministère de l'immigration et de l'environnement sous Harper et Trudeau en 2014 et 2018. Pour le ministère de l'immigration, on a filtré la variable "speakername" pour mettre uniquement Chris Alexander qui était ministre de l'immigration sous Harper en 2014 et Ahmed Hussen qui était ministre de l'immigration sous Trudeau en 2018. On a fait de la même manière concernant le ministère de l'environnement en incluant Leonna Aglukkaq qui était ministre de l’Environnement sous Harper et Catherine McKenna qui était ministre de l’Environnement sous Trudeau. Pour ce qui est du clivage idéologique, on n'est pas certain si on inclut uniquement ceux et celles qui ont occupé les deux ministères dont celui de l'immigration et de l'environnement ou non. Il y a encore quelques incertitudes à régler concernant le nettoyage et sélection des variable pour ce qui est du sujet du clivage idéologique.
+
+Ainsi, pour ce qui est des graphiques, on a également beaucoup de question sur quel type précis de dictionnaire qu'on va inclure pour diffuser les résultats des données. On ne sait pas non plus sur quelles variables précisément qu'il faut inclure pour pouvoir produire nos trois graphiques respectivement que ce soit au niveau du clivage idéologique, de l'échiquier politique de l'immigration et de l'échiquier politique de l'environnement.
+
+## Résultats
+
+On n'a pas de présentation de résultats officielle à travers les graphiques et les tableaux actuellement. Notre hypothèse actuelle pour ce qui est des résultats diffusés est qu'il n'y a pas eu une influence majeure sur l'échiquier politique chez le ministère de l'immigration sous Harper et Trudeau en 2014 et 2018 entre Chris Alexander et Ahmed Hussen. En termes de clivage idéologique, on s'attend que le changement soit probablement assez important chez les différents partis politique parce que les changements de chefs chez le NDP et chez le parti Conservateur après que Harper soit partis aient probablement un impact assez important sur les tendance des discours de ces deux partis politiques. Ce qui sera majeur sur le changement de paradigme politique est sur le ministère de l'environnement entre Leona Aglukkaq et Catherine McKenna entre le mandat de Harper et Trudeau sous l'année 2014 et 2018 respectivement puisque les enjeux environnements ont énormément pris de l'importance depuis quelques années et surtout depuis que Justin Trudeau est arrivé au pouvoir. Plusieurs manifestations liées à l'environnement déjà dans le premier mandat de Trudeau étaient mise en valeur par Trudeau et il a une position très concernée sur le changement climatique lié au problème et aux changement environnementales. Sous Harper, l'enjeux des sables bitumineux a été perçu comme pas très écologique et qui nuisait beaucoup à l'environnement. D'où l'hypothèse dans laquelle on pense que le plus grand changement survenu sur l'échiquier politique des discours vient du ministère de l'environnement entre 2014 et 2018.
+
+# Conclusion
+
+En guise de conclusion, il y a encore beaucoup d'incertitude et d'imprécision sur comment on fera les graphiques concernant les présentations des résultats de données puisqu'on ne sait toujours pas lesquelles des modèles de graphique va équilibrer le mieux possible l'analyse et la visualisation des résultats de données. De plus, on a également inclus les mots clés de chacun des trois dictionnaires en question de clivage idéologique et de l'échiquier politique sur l'immigration et sur l'immigration dans le "topic_dictionnary_en" afin d'élargir les possibilités de diffusion de résultats si on rencontre des problèmes de codage lors de la création des graphiques. Pour simplifier, on a créé trois nouveaux dictionnaires pour chacun des trois sujets du travail avec les observations déjà inclus dans le dictionnaire thématique qui sont issus de lexicoder. Donc, on a précisément 1394 observations et 2 variables pour le nouveau dictionnaire de clivage idéologique et de l'échiquier politique sur l'environnement et 1398 observations sur l'échiquier politique sur l'immigration. La réelle différence c'est qu'on a ajouté deux listes supplémentaires dans les trois nouveaux dictionnaires créés.
+
+```{r}
+library(fs)          # Direction vers tes fichiers
+library(crayon)      # couleurs dans le code
+library(quanteda)    # Package pour lire les dictionnaires library(tidyverse)   
+library(clessnverse) # Package pour utiliser plus facilement un dictionnaire
+library(ggplot2)
+library(astrologer)
+library(beepr)
+library(fs)
+library(gutenbergr)
+library(stm)
+library(tidytext)
+library(stringr)
+library(dplyr)
+library(readr)
+library(tidyr)
+library(listenv)
+library(purrr)
+```
+
+```{r}
+# Dictionnaire en anglais
+
+lexicoder_en <- dictionary(file = "policy_agendas_english.lcd", format = "yoshikoder") 
+
+
+
+topic_dictionary_en <- read_csv("lexicoder_merged.csv") |>
+rename(language = motAnglais) |>
+select(language, categorie) |>
+na.omit() |>
+filter(language != "x") |>
+unstack(., form=language~categorie) |>
+dictionary()
+
+
+#1 Fusion des bases de données pour 2014 & 2018
+
+
+years <- c(2014, 2018)
+
+folders <- map(years, ~ sprintf("%d/%0d/", .x, 1:12))
+read_and_bind <- function(folder_path) {
+  files <- dir(folder_path, full.names = TRUE)
+  data <- map_df(files, ~ read_csv(.x))
+  return(data)
+}
+
+Data_parl <- folders %>%
+  flatten() %>%
+  map_df(read_and_bind)
+str(Data_parl)
+
+
+#2 Fusion des bases de données pour 2014
+
+years2014 <- (2014)
+
+folders_2014 <- map(years2014, ~ sprintf("%d/%0d/", .x, 1:12))
+read_and_bind <- function(folder_path) {
+  files <- dir(folder_path, full.names = TRUE)
+  data <- map_df(files, ~ read_csv(.x))
+  return(data)
+}
+
+Data_parl_1 <- folders_2014 %>%
+  flatten() %>%
+  map_df(read_and_bind)
+str(Data_parl_1)
+
+#3 Fusion des bases de données pour 2018
+
+years2018 <- (2018)
+
+folders_2018 <- map(years2018, ~ sprintf("%d/%0d/", .x, 1:12))
+read_and_bind <- function(folder_path) {
+  files <- dir(folder_path, full.names = TRUE)
+  data <- map_df(files, ~ read_csv(.x))
+  return(data)
+}
+
+Data_parl_2 <- folders_2018 %>%
+  flatten() %>%
+  map_df(read_and_bind)
+str(Data_parl_2)
+
+# ------------------------------------------------------------
+
+
+#4 Dictionnaire clivage idéologique 
+
+dictionnaire_clivage_ideologique <- list(Gauche      = c("social democracy*", "socialism*", "progressivism*", "universal health*", "ecology*", "climate change*", "workers rights*", "unionism*", "social justice*", "equality*"),
+                                  Droite = c("libertarianism*", "nationalism*", "patriotism*", "liberalism*", "self-determination*", "economic liberalism*", "fiscal conservatism*", "federalism*", "traditional values*", "climate skepticism*", "national sovereignty*")) |> # on prépare une liste avec des catégories + mots clés
+  dictionary() # On transforme la list() en dictionnaire avec la fonction de quanteda
+
+# Fusionner deux dictionnaires 
+
+dictionnaire_clivage_ideologique_m <- dictionnaire_clivage_ideologique |> stack() 
+
+topic_dictionary_en_m <- topic_dictionary_en |> stack() # Même chose ici
+
+nouveau_dictionnaire_clivage_ideologique <- bind_rows(dictionnaire_clivage_ideologique_m, topic_dictionary_en_m) |> # On fusionne les deux dictionnaires
+  unstack(values~ind) |>  # Tansformation en list()
+  dictionary()            # Puis en dictionnaire
+
+nouveau_dictionnaire_clivage_ideologique_m <- nouveau_dictionnaire_clivage_ideologique |> stack()
+
+#------------------------------------------------------------------
+
+
+
+#5 Dictionnaire sur l'échiquier politique sur l'environnement 
+
+dictionnaire_echiquier_pol_environnement <- list(Gauche      = c("sustainable development*", "climate justice*", "energetic transition*", "green economy*", "conservation biodiversity*", "sustainable agriculture*", "zero waste*", "food sovereignty*", "eco-socialism*", "animal rights*", "anti-speciesism*"),
+                                  Droite = c("pragmatic conservationism*", "sustainable development*", "economic freedom*", "property rights*", "technological innovation*", "adaptive management*", "nuclear for the climate*", "market ecology*", "climate skepticism*", "responsible exploitation resources*")) |>
+  dictionary() 
+
+# Fusionner deux dictionnaires 
+
+dictionnaire_echiquier_pol_environnement_m <- dictionnaire_echiquier_pol_environnement |> stack() 
+
+nouveau_dictionnaire_echiquier_pol_environnement <- bind_rows(dictionnaire_echiquier_pol_environnement_m, topic_dictionary_en_m) |> 
+  unstack(values~ind) |>
+  dictionary()           
+
+nouveau_dictionnaire_echiquier_pol_environnement_m <- nouveau_dictionnaire_echiquier_pol_environnement |> stack()
+
+#------------------------------------------------------------------
+
+#6 Dictionnaire sur l'échiquier politique sur l'immigration
+
+dictionnaire_echiquier_pol_immigration <- list(Gauche      = c("human rights*", "inclusion*", "diversity*", "equal opportunities*", "reception of refugees*", "legal avenues*", "international solidarity*", "no discrimination*", "social integration*", "protection of migrant workers*", "family reunion*", "inclusive citizenship*"),
+                                  Droite = c("border control*", "national security*", "legal immigration*", "illegal immigration*", "cultural assimilation*", "national priority*", "immigration quotas*", "fight against illegal immigration*", "job protection*", "integration*", "national sovereignty*", "public charge*", "meritocracy*")) |>  
+  dictionary() 
+
+# Fusionner deux dictionnaires 
+
+dictionnaire_echiquier_pol_immigration_m <- dictionnaire_echiquier_pol_immigration |> stack() 
+
+nouveau_dictionnaire_echiquier_pol_immigration <- bind_rows(dictionnaire_echiquier_pol_immigration_m, topic_dictionary_en_m) |> 
+  unstack(values~ind) |>  
+  dictionary()            
+
+nouveau_dictionnaire_echiquier_pol_immigration_m <- nouveau_dictionnaire_echiquier_pol_immigration |> stack()
+
+#---------------------------------------------------------------------
+
+# Nettoyage de la base de donnée et sélection des variables pour clivage idéologique
+
+Donnée_parlementaire_clivage_idéologique <- Data_parl |>
+  select(speechdate, speakeroldname, subtopic, speechtext, speakerparty, speakername) |>
+  mutate(speechtext = tolower(speechtext)) |>
+  filter(speakername %in% c("Chris Alexander", "Leona Aglukkaq", "Catherine McKenna", "Ahmed Hussen")) |>
+  na.omit()
+
+
+# Nettoyage de la base de donnée et sélection des variables pour ministère de l'immigration
+
+Donnée_parlementaire_immigration <- Data_parl |>
+  select(speechdate, speakeroldname, subtopic, speechtext, speakerparty, speakername) |>
+  mutate(speechtext = tolower(speechtext)) |>
+  filter(speakername %in% c("Chris Alexander", "Ahmed Hussen")) |>
+  na.omit()
+
+# Nettoyage de la base de donnée et sélection des variables pour ministère de l'envrionnement
+
+Donnée_parlementaire_environnement <- Data_parl |>
+  select(speechdate, speakeroldname, subtopic, speechtext, speakerparty, speakername) |>
+  mutate(speechtext = tolower(speechtext)) |>
+  filter(speakername %in% c("Leona Aglukkaq", "Catherine McKenna")) |>
+  na.omit()
+
+#-----------------------------------------------------------------------
+
+run_dictionary(data = Donnée_parlementaire_environnement,
+               text = speechtext,
+               dictionary = nouveau_dictionnaire_echiquier_pol_environnement) |>
+  bind_cols(Donnée_parlementaire_environnement) |>
+  select(!c(speechtext)) |>
+  pivot_longer(!c(speechdate, speakerparty, speakername), names_to = "categorie", values_to="n") |>
+  ungroup() |>
+  na.omit() |>
+  group_by(speechdate, speakerparty, categorie) |>
+  summarise(n=sum(n)) |>
+  mutate(prop = round(n/sum(n),4)*100,
+         speakerparty = case_when(speakerparty == "Conservative" ~ "Conservateur",
+                                  speakerparty == "Liberal" ~ "Libéral"),
+         categorie = case_when(categorie == "Leona Aglukkaq" ~ "Aglukkaq",
+                               caregorie == "Catherine McKenna" ~ "McKenna",
+                               T ~ as.character(categorie))) |>
+  filter(categorie %in% c("Aglukkaq", "McKenna")) |>
+  ggplot(aes(x = speechdate, y = prop, color = categorie)) +
+  geom_col() +
+  facet_wrap(~speakerparty) +
+  scale_color_discrete() +
+  theme_bw()
+  
+
+```
