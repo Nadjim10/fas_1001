@@ -1,0 +1,29 @@
+---
+title: "TP1 (FAS-1001)"
+author: "Sadou Ba"
+format: pdf
+editor: visual
+date: 22/01/2024
+---
+
+## ![](images/image_historique.png)
+
+Premièrement nous avons cloné un fichier dans notre répertoire grâce à *git clone*
+
+Ensuite nous avons utilisé *git branch* pour créer une branche dans laquelle nous pourrons apporter des modifications sans corrompre le fichier principal.
+
+Par la suite, nous avons utilisé *git checkout* pour définir la branche que l'on voulait manipulé.
+
+Nous avons aussi utilisé *git add* pour ajouter nos modifications ainsi que *git commit* pour identifier celles-ci.
+
+**Premier commit** : Avec le premier *git add* nous avons crée un fichier quarto du pour le tp1 et avec *git commit nous avons affiché le message: "premier commit"*
+
+**Deuxiéme commit** : Nous avons utilisé *git add pour apporter comme modification un ajout d'un deuxième document quarto en utilisant comme message avec git commit: "creation du document du travail de session"*
+
+Finalement on utilise *git log* pour afficher notre historique
+
+\![image_historique.png\] git log
+
+```{r}
+
+```
